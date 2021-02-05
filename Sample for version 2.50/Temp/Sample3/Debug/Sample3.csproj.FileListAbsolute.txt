@@ -1,0 +1,13 @@
+D:\MyFolder\TCL\zello\zellowork-windows-client-sdk\Samples\Temp\Sample3\Debug\Sample3.AudioSettingsForm.resources
+D:\MyFolder\TCL\zello\zellowork-windows-client-sdk\Samples\Temp\Sample3\Debug\Sample3.MainForm.resources
+D:\MyFolder\TCL\zello\zellowork-windows-client-sdk\Samples\Temp\Sample3\Debug\Sample3.Properties.Resources.resources
+D:\MyFolder\TCL\zello\zellowork-windows-client-sdk\Samples\Temp\Sample3\Debug\Sample3.Resource.resources
+D:\MyFolder\TCL\zello\zellowork-windows-client-sdk\Samples\Temp\Sample3\Debug\Sample3.csproj.GenerateResource.cache
+D:\MyFolder\TCL\zello\zellowork-windows-client-sdk\Samples\Temp\Sample3\Debug\Sample3.csproj.CoreCompileInputs.cache
+D:\MyFolder\TCL\zello\zellowork-windows-client-sdk\Samples\bin\Debug\Sample3\Sample3.exe.config
+D:\MyFolder\TCL\zello\zellowork-windows-client-sdk\Samples\bin\Debug\Sample3\Sample3.exe
+D:\MyFolder\TCL\zello\zellowork-windows-client-sdk\Samples\bin\Debug\Sample3\Sample3.pdb
+D:\MyFolder\TCL\zello\zellowork-windows-client-sdk\Samples\Temp\Sample3\Debug\Sample3.csproj.CopyComplete
+D:\MyFolder\TCL\zello\zellowork-windows-client-sdk\Samples\Temp\Sample3\Debug\Sample3.exe
+D:\MyFolder\TCL\zello\zellowork-windows-client-sdk\Samples\Temp\Sample3\Debug\Sample3.pdb
+D:\MyFolder\TCL\zello\zellowork-windows-client-sdk\Samples\Temp\Sample3\Debug\Sample3.csprojAssemblyReference.cache

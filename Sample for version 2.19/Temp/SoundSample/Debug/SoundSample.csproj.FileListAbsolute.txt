@@ -1,0 +1,15 @@
+D:\MyFolder\TCL\zello\zellowork-windows-client-sdk\Samples\Temp\SoundSample\Debug\SoundSample.MainForm.resources
+D:\MyFolder\TCL\zello\zellowork-windows-client-sdk\Samples\Temp\SoundSample\Debug\SoundSample.Properties.Resources.resources
+D:\MyFolder\TCL\zello\zellowork-windows-client-sdk\Samples\Temp\SoundSample\Debug\SoundSample.Resource.resources
+D:\MyFolder\TCL\zello\zellowork-windows-client-sdk\Samples\Temp\SoundSample\Debug\SoundSample.csproj.GenerateResource.cache
+D:\MyFolder\TCL\zello\zellowork-windows-client-sdk\Samples\Temp\SoundSample\Debug\SoundSample.csproj.CoreCompileInputs.cache
+D:\MyFolder\TCL\zello\zellowork-windows-client-sdk\Samples\bin\Debug\SoundSample\SoundSample.exe.config
+D:\MyFolder\TCL\zello\zellowork-windows-client-sdk\Samples\bin\Debug\SoundSample\SoundSample.exe
+D:\MyFolder\TCL\zello\zellowork-windows-client-sdk\Samples\bin\Debug\SoundSample\SoundSample.pdb
+D:\MyFolder\TCL\zello\zellowork-windows-client-sdk\Samples\Temp\SoundSample\Debug\SoundSample.exe
+D:\MyFolder\TCL\zello\zellowork-windows-client-sdk\Samples\Temp\SoundSample\Debug\SoundSample.pdb
+D:\MyFolder\TCL\zello\zellowork-windows-client-sdk\Samples\Temp\SoundSample\Debug\SoundSample.csproj.CopyComplete
+D:\MyFolder\TCL\zello\zellowork-windows-client-sdk\Samples\bin\Debug\SoundSample\SoundSample.xml
+D:\MyFolder\TCL\zello\zellowork-windows-client-sdk\Samples\Temp\SoundSample\Debug\SoundSample.csprojAssemblyReference.cache
+D:\MyFolder\TCL\zello\zellowork-windows-client-sdk\Samples\Temp\SoundSample\Debug\Interop.PttLib.dll
+D:\MyFolder\TCL\zello\zellowork-windows-client-sdk\Samples\Temp\SoundSample\Debug\SoundSample.csproj.ResolveComReference.cache

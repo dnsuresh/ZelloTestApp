@@ -1,0 +1,1082 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 14.27.29112.0 (b72c8cd2).
+//
+// D:\MyFolder\TCL\zello\zellowork-windows-client-sdk\Samples\temp\Sample1\Debug\ptt.tlh
+//
+// C++ source equivalent of Win32 type library {7E28D927-9F0F-4cc6-9BD9-E095B1574CCC}
+// compiler-generated file created 02/05/21 at 14:07:36 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace PttLib {
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("7e28d927-9f0f-4cc6-9bd9-e095b1574ccc"))
+/* LIBID */ __PttLib;
+struct __declspec(uuid("6ccb765f-ada5-4fea-9cec-cf55360ea0ce"))
+/* dispinterface */ IPttEvents;
+enum CLIENT_ERROR;
+struct __declspec(uuid("3a50d50e-a39d-4677-85e3-61e458abcc80"))
+/* dual interface */ IMessage;
+enum MESSAGE_TYPE;
+struct __declspec(uuid("034efc0a-35ce-4fef-96eb-7a44a3be5461"))
+/* dual interface */ IContact;
+enum CONTACT_TYPE;
+enum ONLINE_STATUS;
+struct __declspec(uuid("8014091c-f92d-4441-a7a6-9677651d86dd"))
+/* dual interface */ IHistory;
+struct __declspec(uuid("28987b75-a974-46a7-9503-624fd0bf7c69"))
+/* dual interface */ IAudioInMessage;
+struct __declspec(uuid("e0434039-64d0-4849-a62a-e780d3ea9e57"))
+/* dual interface */ IAudioMessage;
+struct /* coclass */ Ptt;
+struct __declspec(uuid("b535a432-1cf4-44a8-aac3-1f736c353cb7"))
+/* dual interface */ IPtt;
+enum NETWORK_STATUS;
+struct __declspec(uuid("d617ec4d-0a09-4041-b01f-97b68526f820"))
+/* dual interface */ IContacts;
+struct __declspec(uuid("ed0cd84a-3d1c-4b42-b7f0-b3922f710627"))
+/* dual interface */ INetwork;
+struct __declspec(uuid("e513b0b0-c55e-468a-9535-b982d82e1047"))
+/* dual interface */ ISettings;
+struct __declspec(uuid("a2faf806-7439-42fe-a75f-f9a5abf2a663"))
+/* dual interface */ IAudioPlayer;
+struct __declspec(uuid("dd8fd727-e041-4fea-8415-156e3cca1e6a"))
+/* dual interface */ ICustomization;
+struct __declspec(uuid("46b9c8d5-2e2f-4ce0-9262-948d320c3e76"))
+/* dual interface */ ISettings2;
+struct __declspec(uuid("6f6d708f-0601-47e4-836e-6ea2f942ec3f"))
+/* dual interface */ IAudioDevices;
+struct __declspec(uuid("69e1efc4-e851-42bc-ac43-21a58b6cb091"))
+/* dual interface */ ISettings3;
+struct __declspec(uuid("63481916-16c0-490b-ba2a-62364b400e9f"))
+/* dual interface */ ISettings4;
+enum SETTING_ID;
+struct __declspec(uuid("02962e0d-38a2-4c34-bf2a-2f2a0b48e447"))
+/* dual interface */ IPtt2;
+struct __declspec(uuid("bd0f65cd-afcd-4407-9ae3-eb3ee4babd60"))
+/* dual interface */ IPtt3;
+struct __declspec(uuid("ee361df2-315c-47fe-9526-c7ea044dce5e"))
+/* dual interface */ IPtt4;
+struct __declspec(uuid("c4e02a76-5b35-49a7-bc0a-239a07170ae5"))
+/* dual interface */ IAudioMessagePlayback;
+struct __declspec(uuid("9c920e6d-49bc-4227-b36e-a3f6badbb8ac"))
+/* dual interface */ IAudioStream;
+struct __declspec(uuid("597ea004-ce73-496e-8607-fa89a9eae34a"))
+/* dual interface */ IAudioMessageRecord;
+struct __declspec(uuid("6d3c8268-383c-47ff-883a-b319731b28d9"))
+/* dual interface */ INetwork2;
+struct __declspec(uuid("a2990a6c-f294-4d7f-88c9-99e384102ce4"))
+/* dual interface */ IAudioInMessage2;
+struct __declspec(uuid("d77f9c22-8689-4a75-851c-9d9c64e23d67"))
+/* dual interface */ IAudioOutMessage;
+struct __declspec(uuid("0ea8c648-d310-4b62-abfc-00c71a39da82"))
+/* dual interface */ IAudioOutMessage2;
+struct __declspec(uuid("f4ccb942-f285-4646-a116-f6301c459318"))
+/* dual interface */ IAlertMessage;
+struct __declspec(uuid("bb89fa86-bc29-4953-94fc-1f8830858beb"))
+/* dual interface */ ISharedImage;
+struct __declspec(uuid("0000000c-0000-0000-c000-000000000046"))
+/* interface */ IStream;
+struct __declspec(uuid("0c733a30-2a1c-11ce-ade5-00aa0044773d"))
+/* interface */ ISequentialStream;
+struct _LARGE_INTEGER;
+struct _ULARGE_INTEGER;
+struct tagSTATSTG;
+struct _FILETIME;
+struct __declspec(uuid("e632f6ca-69e6-43a7-ade1-331bb33a72f1"))
+/* dual interface */ IUser;
+struct __declspec(uuid("087027e3-181f-423e-aeec-2ed93967af4b"))
+/* dual interface */ IGroup;
+struct __declspec(uuid("292c5923-a717-465d-b222-e7af7e9a79e8"))
+/* dual interface */ IChannel;
+enum PTT_EVENTS;
+typedef struct IUser * IUser_;
+typedef struct IGroup * IGroup_;
+typedef struct IChannel * IChannel_;
+typedef struct IMessage * IMessage_;
+typedef struct IAudioMessage * IAudioMessage_;
+typedef struct IAudioInMessage * IAudioInMessage_;
+typedef struct IAudioInMessage2 * IAudioInMessage2_;
+typedef struct IAudioOutMessage * IAudioOutMessage_;
+typedef enum PTT_EVENTS PTT_EVENTS_;
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("6ccb765f-ada5-4fea-9cec-cf55360ea0ce"))
+IPttEvents : IDispatch
+{};
+
+enum CLIENT_ERROR
+{
+    CL_NoError = 0,
+    CL_UnknownError = 1,
+    CL_InvalidCredentials = 2,
+    CL_ExistingUsername = 3,
+    CL_InvalidUsername = 4,
+    CL_EmptyUsername = 5,
+    CL_ExistingChannelName = 6,
+    CL_SignInServerError = 7,
+    CL_SignInServerUnavailable = 8,
+    CL_SuperNodeError = 9,
+    CL_OldVersion = 10,
+    CL_NetworkSuspended = 11,
+    CL_Reconnecting = 12,
+    CL_Kicked = 13,
+    CL_SignUpServerError = 14,
+    CL_SignUpServerUnavailable = 15,
+    CL_SignUpDailyRateExceeded = 16,
+    CL_SignUpWeeklyRateExceeded = 17,
+    CL_SignUpMonthlyRateExceeded = 18,
+    CL_AddContactOffline = 19,
+    CL_AddContactError = 20,
+    CL_AddContactExists = 21,
+    CL_ChannelNotFound = 22,
+    CL_ChangePwdOffline = 23,
+    CL_ChangePwdInvalidPassword = 24,
+    CL_NoPermission = 25,
+    CL_ProxyUnavailable = 26,
+    CL_ProxyAuthError = 27,
+    CL_SignInCancelled = 28,
+    CL_LicenseError = 29,
+    CL_LicenseExpired = 30,
+    CL_WrongNetwork = 31,
+    CL_ContactListError = 32,
+    CL_NoConnection = 33,
+    CL_ConnectionLost = 34,
+    CL_Pending = 35,
+    CL_Cancelled = 36,
+    CL_BruteForce = 37,
+    CL_Banned = 38,
+    CL_TlsRequired = 39
+};
+
+enum MESSAGE_TYPE
+{
+    MTAUDIO = 0,
+    MTALERT = 1,
+    MTIMAGE = 2,
+    MTLOCATION = 3,
+    MTTEXT = 4
+};
+
+struct __declspec(uuid("3a50d50e-a39d-4677-85e3-61e458abcc80"))
+IMessage : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Id (
+        /*[out,retval]*/ BSTR * pbstrVal ) = 0;
+      virtual HRESULT __stdcall get_Type (
+        /*[out,retval]*/ enum MESSAGE_TYPE * pVal ) = 0;
+      virtual HRESULT __stdcall get_CreationTime (
+        /*[out,retval]*/ DATE * pdVal ) = 0;
+      virtual HRESULT __stdcall get_Incoming (
+        /*[out,retval]*/ VARIANT_BOOL * pbVal ) = 0;
+      virtual HRESULT __stdcall put_Read (
+        /*[in]*/ VARIANT_BOOL pbVal ) = 0;
+      virtual HRESULT __stdcall get_Read (
+        /*[out,retval]*/ VARIANT_BOOL * pbVal ) = 0;
+      virtual HRESULT __stdcall Delete ( ) = 0;
+};
+
+enum CONTACT_TYPE
+{
+    CTUSER = 0,
+    CTGROUP = 1,
+    CTCHANNEL = 2
+};
+
+enum ONLINE_STATUS
+{
+    OSOFFLINE = 0,
+    OSAVAILABLE = 1,
+    OSBUSY = 2,
+    OSAWAY = 3,
+    OSHEADPHONES = 4,
+    OSCONNECTING = 5,
+    OSSTANDBY = 6,
+    OSUNKNOWN = 7
+};
+
+struct __declspec(uuid("8014091c-f92d-4441-a7a6-9677651d86dd"))
+IHistory : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ int * piVal ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        /*[in]*/ int iIndex,
+        /*[out,retval]*/ struct IMessage * * ppMessage ) = 0;
+      virtual HRESULT __stdcall Find (
+        /*[in]*/ BSTR bstrId,
+        /*[out,retval]*/ struct IMessage * * ppMessage ) = 0;
+      virtual HRESULT __stdcall DeleteAll ( ) = 0;
+};
+
+struct __declspec(uuid("034efc0a-35ce-4fef-96eb-7a44a3be5461"))
+IContact : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Id (
+        /*[out,retval]*/ BSTR * pbstrVal ) = 0;
+      virtual HRESULT __stdcall get_Type (
+        /*[out,retval]*/ enum CONTACT_TYPE * pVal ) = 0;
+      virtual HRESULT __stdcall get_Name (
+        /*[out,retval]*/ BSTR * pbstrVal ) = 0;
+      virtual HRESULT __stdcall get_FullName (
+        /*[out,retval]*/ BSTR * pbstrVal ) = 0;
+      virtual HRESULT __stdcall get_Description (
+        /*[out,retval]*/ BSTR * pbstrVal ) = 0;
+      virtual HRESULT __stdcall get_Status (
+        /*[out,retval]*/ enum ONLINE_STATUS * pVal ) = 0;
+      virtual HRESULT __stdcall get_History (
+        /*[out,retval]*/ struct IHistory * * ppVal ) = 0;
+      virtual HRESULT __stdcall put_Muted (
+        /*[in]*/ VARIANT_BOOL pbVal ) = 0;
+      virtual HRESULT __stdcall get_Muted (
+        /*[out,retval]*/ VARIANT_BOOL * pbVal ) = 0;
+};
+
+struct __declspec(uuid("e0434039-64d0-4849-a62a-e780d3ea9e57"))
+IAudioMessage : IMessage
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Duration (
+        /*[out,retval]*/ int * piVal ) = 0;
+};
+
+struct __declspec(uuid("28987b75-a974-46a7-9503-624fd0bf7c69"))
+IAudioInMessage : IAudioMessage
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Sender (
+        /*[out,retval]*/ struct IContact * * ppVal ) = 0;
+      virtual HRESULT __stdcall get_Author (
+        /*[out,retval]*/ struct IContact * * ppVal ) = 0;
+};
+
+struct __declspec(uuid("8316a274-c3ce-46ae-9121-cb8e4080d0db"))
+Ptt;
+    // [ default ] interface IPtt
+    // [ default, source ] dispinterface IPttEvents
+
+enum NETWORK_STATUS
+{
+    NSOFFLINE = 0,
+    NSONLINE = 1,
+    NSSIGNINGIN = 2,
+    NSSIGNINGOUT = 3
+};
+
+struct __declspec(uuid("d617ec4d-0a09-4041-b01f-97b68526f820"))
+IContacts : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ int * piVal ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        /*[in]*/ int iIndex,
+        /*[out,retval]*/ struct IContact * * ppContact ) = 0;
+      virtual HRESULT __stdcall Find (
+        /*[in]*/ BSTR bstrContact,
+        /*[out,retval]*/ struct IContact * * ppContact ) = 0;
+};
+
+struct __declspec(uuid("ed0cd84a-3d1c-4b42-b7f0-b3922f710627"))
+INetwork : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall put_LoginServer (
+        /*[in]*/ BSTR _arg1 ) = 0;
+      virtual HRESULT __stdcall put_WebServer (
+        /*[in]*/ BSTR _arg1 ) = 0;
+      virtual HRESULT __stdcall AddSupernode (
+        /*[in]*/ BSTR bstrVal ) = 0;
+      virtual HRESULT __stdcall ResetSupernodes ( ) = 0;
+      virtual HRESULT __stdcall put_NetworkName (
+        /*[in]*/ BSTR _arg1 ) = 0;
+};
+
+struct __declspec(uuid("e513b0b0-c55e-468a-9535-b982d82e1047"))
+ISettings : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_CompactContactList (
+        /*[out,retval]*/ VARIANT_BOOL * pbVal ) = 0;
+      virtual HRESULT __stdcall put_CompactContactList (
+        /*[in]*/ VARIANT_BOOL pbVal ) = 0;
+      virtual HRESULT __stdcall get_ShowTrayIcon (
+        /*[out,retval]*/ VARIANT_BOOL * pbVal ) = 0;
+      virtual HRESULT __stdcall put_ShowTrayIcon (
+        /*[in]*/ VARIANT_BOOL pbVal ) = 0;
+      virtual HRESULT __stdcall get_ShowOfflineMenuCommand (
+        /*[out,retval]*/ VARIANT_BOOL * pbVal ) = 0;
+      virtual HRESULT __stdcall put_ShowOfflineMenuCommand (
+        /*[in]*/ VARIANT_BOOL pbVal ) = 0;
+      virtual HRESULT __stdcall get_ShowIncomingNotification (
+        /*[out,retval]*/ VARIANT_BOOL * pbVal ) = 0;
+      virtual HRESULT __stdcall put_ShowIncomingNotification (
+        /*[in]*/ VARIANT_BOOL pbVal ) = 0;
+      virtual HRESULT __stdcall get_ShowOutgoingNotification (
+        /*[out,retval]*/ VARIANT_BOOL * pbVal ) = 0;
+      virtual HRESULT __stdcall put_ShowOutgoingNotification (
+        /*[in]*/ VARIANT_BOOL pbVal ) = 0;
+      virtual HRESULT __stdcall get_CreateSoftKeyBar (
+        /*[out,retval]*/ VARIANT_BOOL * pbVal ) = 0;
+      virtual HRESULT __stdcall put_CreateSoftKeyBar (
+        /*[in]*/ VARIANT_BOOL pbVal ) = 0;
+      virtual HRESULT __stdcall get_VoxEnabled (
+        /*[out,retval]*/ VARIANT_BOOL * pbVal ) = 0;
+      virtual HRESULT __stdcall put_VoxEnabled (
+        /*[in]*/ VARIANT_BOOL pbVal ) = 0;
+      virtual HRESULT __stdcall get_VoxActivationThreshold (
+        /*[out,retval]*/ int * piVal ) = 0;
+      virtual HRESULT __stdcall put_VoxActivationThreshold (
+        /*[in]*/ int piVal ) = 0;
+      virtual HRESULT __stdcall get_VoxDeactivationThreshold (
+        /*[out,retval]*/ int * piVal ) = 0;
+      virtual HRESULT __stdcall put_VoxDeactivationThreshold (
+        /*[in]*/ int piVal ) = 0;
+      virtual HRESULT __stdcall get_VoxTriggerTime (
+        /*[out,retval]*/ int * piVal ) = 0;
+      virtual HRESULT __stdcall put_VoxTriggerTime (
+        /*[in]*/ int piVal ) = 0;
+      virtual HRESULT __stdcall get_VoxRelaxationTime (
+        /*[out,retval]*/ int * piVal ) = 0;
+      virtual HRESULT __stdcall put_VoxRelaxationTime (
+        /*[in]*/ int piVal ) = 0;
+};
+
+struct __declspec(uuid("a2faf806-7439-42fe-a75f-f9a5abf2a663"))
+IAudioPlayer : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall put_Message (
+        /*[in]*/ struct IAudioMessage * ppVal ) = 0;
+      virtual HRESULT __stdcall get_Message (
+        /*[out,retval]*/ struct IAudioMessage * * ppVal ) = 0;
+      virtual HRESULT __stdcall Play ( ) = 0;
+      virtual HRESULT __stdcall Stop ( ) = 0;
+      virtual HRESULT __stdcall put_Position (
+        /*[in]*/ int piVal ) = 0;
+      virtual HRESULT __stdcall get_Position (
+        /*[out,retval]*/ int * piVal ) = 0;
+};
+
+struct __declspec(uuid("dd8fd727-e041-4fea-8415-156e3cca1e6a"))
+ICustomization : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall put_OemConfigFile (
+        /*[in]*/ BSTR _arg1 ) = 0;
+      virtual HRESULT __stdcall put_OemConfigData (
+        /*[in,out]*/ SAFEARRAY * * _arg1 ) = 0;
+};
+
+struct __declspec(uuid("b535a432-1cf4-44a8-aac3-1f736c353cb7"))
+IPtt : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall SignIn (
+        /*[in]*/ BSTR bstrUsername,
+        /*[in]*/ BSTR bstrPassword,
+        /*[in]*/ VARIANT_BOOL bPasswordHash ) = 0;
+      virtual HRESULT __stdcall SignOut ( ) = 0;
+      virtual HRESULT __stdcall Cancel ( ) = 0;
+      virtual HRESULT __stdcall get_NetworkStatus (
+        /*[out,retval]*/ enum NETWORK_STATUS * pVal ) = 0;
+      virtual HRESULT __stdcall put_OnlineStatus (
+        /*[in]*/ enum ONLINE_STATUS pVal ) = 0;
+      virtual HRESULT __stdcall get_OnlineStatus (
+        /*[out,retval]*/ enum ONLINE_STATUS * pVal ) = 0;
+      virtual HRESULT __stdcall get_Username (
+        /*[out,retval]*/ BSTR * pbstrVal ) = 0;
+      virtual HRESULT __stdcall get_Password (
+        /*[out,retval]*/ BSTR * pbstrVal ) = 0;
+      virtual HRESULT __stdcall get_Contacts (
+        /*[out,retval]*/ struct IContacts * * ppVal ) = 0;
+      virtual HRESULT __stdcall get_Network (
+        /*[out,retval]*/ struct INetwork * * ppVal ) = 0;
+      virtual HRESULT __stdcall get_Settings (
+        /*[out,retval]*/ struct ISettings * * ppVal ) = 0;
+      virtual HRESULT __stdcall get_History (
+        /*[in]*/ BSTR bstrFilter,
+        /*[out,retval]*/ struct IHistory * * ppVal ) = 0;
+      virtual HRESULT __stdcall get_AudioPlayer (
+        /*[out,retval]*/ struct IAudioPlayer * * ppVal ) = 0;
+      virtual HRESULT __stdcall ShowSettingsDialog (
+        /*[in]*/ long lParentWindow ) = 0;
+      virtual HRESULT __stdcall ShowAboutDialog (
+        /*[in]*/ long lParentWindow ) = 0;
+      virtual HRESULT __stdcall ShowFeedbackDialog (
+        /*[in]*/ long lParentWindow ) = 0;
+      virtual HRESULT __stdcall ShowPasswordWizard (
+        /*[in]*/ long lParentWindow ) = 0;
+      virtual HRESULT __stdcall BeginMessage (
+        /*[in]*/ SAFEARRAY * Users ) = 0;
+      virtual HRESULT __stdcall EndMessage ( ) = 0;
+      virtual HRESULT __stdcall RepeatLastMessage ( ) = 0;
+      virtual HRESULT __stdcall BeginMessage2 (
+        /*[in,out]*/ SAFEARRAY * * Users ) = 0;
+      virtual HRESULT __stdcall get_Customization (
+        /*[out,retval]*/ struct ICustomization * * ppVal ) = 0;
+      virtual HRESULT __stdcall UpdateContacts ( ) = 0;
+      virtual HRESULT __stdcall ShowContacts ( ) = 0;
+      virtual HRESULT __stdcall OpenHistory (
+        struct IContact * pContact ) = 0;
+      virtual HRESULT __stdcall CloseHistory ( ) = 0;
+      virtual HRESULT __stdcall ExpandContact (
+        struct IContact * pContact ) = 0;
+      virtual HRESULT __stdcall SelectContact (
+        struct IContact * pContact ) = 0;
+      virtual HRESULT __stdcall get_VoxActive (
+        /*[out,retval]*/ VARIANT_BOOL * pbVal ) = 0;
+      virtual HRESULT __stdcall put_VoxActive (
+        /*[in]*/ VARIANT_BOOL pbVal ) = 0;
+      virtual HRESULT __stdcall put_StatusText (
+        /*[in]*/ BSTR pbstrStatusText ) = 0;
+      virtual HRESULT __stdcall get_StatusText (
+        /*[out,retval]*/ BSTR * pbstrStatusText ) = 0;
+};
+
+struct __declspec(uuid("6f6d708f-0601-47e4-836e-6ea2f942ec3f"))
+IAudioDevices : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ int * piVal ) = 0;
+      virtual HRESULT __stdcall get_Id (
+        /*[in]*/ int iIndex,
+        /*[out,retval]*/ BSTR * pbstrVal ) = 0;
+      virtual HRESULT __stdcall get_Name (
+        /*[in]*/ int iIndex,
+        /*[out,retval]*/ BSTR * pbstrVal ) = 0;
+};
+
+struct __declspec(uuid("46b9c8d5-2e2f-4ce0-9262-948d320c3e76"))
+ISettings2 : ISettings
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_PlaybackDeviceId (
+        /*[out,retval]*/ BSTR * pbstrVal ) = 0;
+      virtual HRESULT __stdcall put_PlaybackDeviceId (
+        /*[in]*/ BSTR pbstrVal ) = 0;
+      virtual HRESULT __stdcall get_RecordingDeviceId (
+        /*[out,retval]*/ BSTR * pbstrVal ) = 0;
+      virtual HRESULT __stdcall put_RecordingDeviceId (
+        /*[in]*/ BSTR pbstrVal ) = 0;
+      virtual HRESULT __stdcall GetPlaybackDevices (
+        /*[out,retval]*/ struct IAudioDevices * * pparrDevices ) = 0;
+      virtual HRESULT __stdcall GetRecordingDevices (
+        /*[out,retval]*/ struct IAudioDevices * * pparrDevices ) = 0;
+};
+
+struct __declspec(uuid("69e1efc4-e851-42bc-ac43-21a58b6cb091"))
+ISettings3 : ISettings2
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_ProxyEnabled (
+        /*[out,retval]*/ VARIANT_BOOL * pbVal ) = 0;
+      virtual HRESULT __stdcall put_ProxyEnabled (
+        /*[in]*/ VARIANT_BOOL pbVal ) = 0;
+      virtual HRESULT __stdcall get_ProxyType (
+        /*[out,retval]*/ VARIANT_BOOL * pbVal ) = 0;
+      virtual HRESULT __stdcall put_ProxyType (
+        /*[in]*/ VARIANT_BOOL pbVal ) = 0;
+      virtual HRESULT __stdcall SetProxyServer (
+        /*[in]*/ BSTR bstrAddress,
+        /*[in]*/ unsigned int uiPort ) = 0;
+      virtual HRESULT __stdcall get_ProxyServerAddress (
+        /*[out,retval]*/ BSTR * pbstrVal ) = 0;
+      virtual HRESULT __stdcall get_ProxyServerPort (
+        /*[out,retval]*/ unsigned short * pusVal ) = 0;
+      virtual HRESULT __stdcall get_ProxyAuthEnabled (
+        /*[out,retval]*/ VARIANT_BOOL * pbVal ) = 0;
+      virtual HRESULT __stdcall put_ProxyAuthEnabled (
+        /*[in]*/ VARIANT_BOOL pbVal ) = 0;
+      virtual HRESULT __stdcall SetProxyServerAuth (
+        /*[in]*/ BSTR bstrLogin,
+        /*[in]*/ BSTR bstrPassword ) = 0;
+      virtual HRESULT __stdcall get_ProxyServerLogin (
+        /*[out,retval]*/ BSTR * pbstrVal ) = 0;
+      virtual HRESULT __stdcall get_ProxyServerPassword (
+        /*[out,retval]*/ BSTR * pbstrVal ) = 0;
+};
+
+enum SETTING_ID
+{
+    ST_VERSION = 0,
+    ST_WRITE_LOG = 1,
+    ST_CHORUS_MODE = 2,
+    ST_AUD_DEV_PLAYBACK = 10,
+    ST_AUD_DEV_RECORDING = 11,
+    ST_AUD_PLAYBACK_VOLUME = 12,
+    ST_AUD_RECORDING_VOLUME = 13,
+    ST_AUD_PLAYBACK_AMPL = 14,
+    ST_AUD_RECORDING_AMPL = 15,
+    ST_AUD_NOISE_SUPP = 16,
+    ST_IFC_AUTO_AWAY = 20,
+    ST_IFC_AUTO_AWAY_TIME = 21,
+    ST_IFC_INC_NOTIFY = 22,
+    ST_IFC_OUT_NOTIFY = 23,
+    ST_IFC_NOTIFY_LEFT = 24,
+    ST_IFC_NOTIFY_TOP = 25,
+    ST_IFC_VIBRATE_BUSY = 26,
+    ST_IFC_VIBRATE_CTS = 27,
+    ST_IFC_RCV_IMAGES = 28,
+    ST_IFC_LANG = 29,
+    ST_IFC_TXT_ALLOWED = 30,
+    ST_VOX_ENABLE = 40,
+    ST_VOX_ACTIVATION = 41,
+    ST_VOX_DEACTIVATION = 42,
+    ST_VOX_TRIGGER_TIME = 43,
+    ST_VOX_RELAX_TIME = 44,
+    ST_VOX_SAVE_STATE = 45,
+    ST_CTRL_PTT_KEYCODE = 50,
+    ST_CTRL_LOCK_KEYCODE = 51,
+    ST_CTRL_REPLAY_KEYCODE = 52,
+    ST_CTRL_SWITCH_CHORUS = 53,
+    ST_CTRL_WAKE_SOUND = 54,
+    ST_CTRL_INC_SOUND = 55,
+    ST_CTRL_CTS_SOUND = 56,
+    ST_CTRL_INC_OVER_SOUND = 57,
+    ST_CTRL_ERROR_SOUND = 58,
+    ST_CTRL_OUT_OVER_SOUND = 59,
+    ST_CTRL_ALERT_SOUND = 60,
+    ST_CTRL_IMAGE_SOUND = 61,
+    ST_NTW_NO_TLS = 70,
+    ST_NTW_TCP_ONLY = 71,
+    ST_NTW_RLKA = 72,
+    ST_NTW_SNKA = 73,
+    ST_NTW_USE_PROXY = 74,
+    ST_NTW_PROXY_TYPE = 75,
+    ST_NTW_PROXY_SERVER = 76,
+    ST_NTW_USE_PROXY_AUTH = 77,
+    ST_NTW_PROXY_UNAME = 78,
+    ST_NTW_PROXY_PWD = 79,
+    ST_CDC_PACKETS = 90,
+    ST_CDC_QUALITY = 91,
+    ST_CDC_COMPLEXITY = 92,
+    ST_CDC_PACKET_LOSS_RATE = 93,
+    ST_CDC_ENABLE_VBR = 94
+};
+
+struct __declspec(uuid("63481916-16c0-490b-ba2a-62364b400e9f"))
+ISettings4 : ISettings3
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall GetValue (
+        /*[in]*/ enum SETTING_ID settId,
+        /*[out,retval]*/ VARIANT * pvtVal ) = 0;
+      virtual HRESULT __stdcall SetValue (
+        /*[in]*/ enum SETTING_ID settId,
+        /*[in]*/ VARIANT vtVal ) = 0;
+};
+
+struct __declspec(uuid("02962e0d-38a2-4c34-bf2a-2f2a0b48e447"))
+IPtt2 : IPtt
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall BeginMessageEx (
+        /*[in]*/ SAFEARRAY * Users,
+        /*[in]*/ BSTR bstrExternalId ) = 0;
+      virtual HRESULT __stdcall SendCallAlert (
+        /*[in]*/ struct IContact * pContact,
+        /*[in]*/ BSTR bstrText,
+        /*[in]*/ BSTR bstrExternalId ) = 0;
+      virtual HRESULT __stdcall ShareImage (
+        /*[in]*/ struct IContact * pContact,
+        /*[in]*/ BSTR bstrText,
+        /*[in]*/ BSTR bstrExternalId ) = 0;
+      virtual HRESULT __stdcall GetSoloContact (
+        /*[out,retval]*/ struct IContact * * ppVal ) = 0;
+      virtual HRESULT __stdcall UpdateSoloContact (
+        /*[in]*/ struct IContact * pContact ) = 0;
+};
+
+struct __declspec(uuid("bd0f65cd-afcd-4407-9ae3-eb3ee4babd60"))
+IPtt3 : IPtt2
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_AutoConnect (
+        /*[out,retval]*/ VARIANT_BOOL * pbVal ) = 0;
+      virtual HRESULT __stdcall put_AutoConnect (
+        /*[in]*/ VARIANT_BOOL pbVal ) = 0;
+};
+
+struct __declspec(uuid("9c920e6d-49bc-4227-b36e-a3f6badbb8ac"))
+IAudioStream : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall Start (
+        /*[in]*/ int iSampleRate ) = 0;
+      virtual HRESULT __stdcall Stop ( ) = 0;
+      virtual HRESULT __stdcall WriteSamples (
+        /*[in]*/ VARIANT vData ) = 0;
+      virtual HRESULT __stdcall get_NativeSampleRate (
+        /*[out,retval]*/ int * piSampleRate ) = 0;
+};
+
+struct __declspec(uuid("c4e02a76-5b35-49a7-bc0a-239a07170ae5"))
+IAudioMessagePlayback : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_NativeSampleRate (
+        /*[out,retval]*/ int * piSampleRate ) = 0;
+      virtual HRESULT __stdcall MessageInBegin (
+        /*[in]*/ struct IMessage * pMessage,
+        /*[out,retval]*/ struct IAudioStream * * pStream ) = 0;
+};
+
+struct __declspec(uuid("597ea004-ce73-496e-8607-fa89a9eae34a"))
+IAudioMessageRecord : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall MessageOutBegin (
+        /*[in]*/ struct IContact * pContact,
+        /*[in]*/ BSTR bstrExternalId,
+        /*[out]*/ struct IMessage * * ppMessage,
+        /*[out,retval]*/ struct IAudioStream * * ppStream ) = 0;
+      virtual HRESULT __stdcall MessageOutBeginEx (
+        /*[in]*/ SAFEARRAY * Users,
+        /*[in]*/ BSTR bstrExternalId,
+        /*[out]*/ struct IMessage * * ppMessage,
+        /*[out,retval]*/ struct IAudioStream * * ppStream ) = 0;
+};
+
+struct __declspec(uuid("ee361df2-315c-47fe-9526-c7ea044dce5e"))
+IPtt4 : IPtt3
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall StartAudioMessageIntegration (
+        /*[in]*/ struct IAudioMessagePlayback * pPlayback,
+        /*[out,retval]*/ struct IAudioMessageRecord * * ppRecord ) = 0;
+      virtual HRESULT __stdcall StopAudioMessageIntegration ( ) = 0;
+      virtual HRESULT __stdcall get_Chorus (
+        /*[out,retval]*/ VARIANT_BOOL * pbVal ) = 0;
+      virtual HRESULT __stdcall put_Chorus (
+        /*[in]*/ VARIANT_BOOL pbVal ) = 0;
+};
+
+struct __declspec(uuid("6d3c8268-383c-47ff-883a-b319731b28d9"))
+INetwork2 : INetwork
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall EnableTls (
+        /*[in]*/ BSTR bstrCommonName ) = 0;
+      virtual HRESULT __stdcall get_SecureConnections (
+        /*[out,retval]*/ VARIANT_BOOL * pbVal ) = 0;
+};
+
+struct __declspec(uuid("a2990a6c-f294-4d7f-88c9-99e384102ce4"))
+IAudioInMessage2 : IAudioInMessage
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_ExternalId (
+        /*[out,retval]*/ BSTR * pbstrVal ) = 0;
+      virtual HRESULT __stdcall get_Crosslink (
+        /*[out,retval]*/ BSTR * pbstrVal ) = 0;
+      virtual HRESULT __stdcall get_CrosslinkAuthor (
+        /*[out,retval]*/ BSTR * pbstrVal ) = 0;
+      virtual HRESULT __stdcall get_CrosslinkAuthorDisplayName (
+        /*[out,retval]*/ BSTR * pbstrVal ) = 0;
+};
+
+struct __declspec(uuid("d77f9c22-8689-4a75-851c-9d9c64e23d67"))
+IAudioOutMessage : IAudioMessage
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Recipients (
+        /*[out,retval]*/ struct IContacts * * ppVal ) = 0;
+};
+
+struct __declspec(uuid("0ea8c648-d310-4b62-abfc-00c71a39da82"))
+IAudioOutMessage2 : IAudioOutMessage
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_ExternalId (
+        /*[out,retval]*/ BSTR * pbstrVal ) = 0;
+};
+
+struct __declspec(uuid("f4ccb942-f285-4646-a116-f6301c459318"))
+IAlertMessage : IMessage
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Text (
+        /*[out,retval]*/ BSTR * pbstrVal ) = 0;
+      virtual HRESULT __stdcall get_ExternalId (
+        /*[out,retval]*/ BSTR * pbstrVal ) = 0;
+      virtual HRESULT __stdcall get_Sender (
+        /*[out,retval]*/ struct IContact * * ppVal ) = 0;
+      virtual HRESULT __stdcall get_Author (
+        /*[out,retval]*/ struct IContact * * ppVal ) = 0;
+      virtual HRESULT __stdcall get_FullName (
+        /*[out,retval]*/ BSTR * pbstrVal ) = 0;
+      virtual HRESULT __stdcall get_Crosslink (
+        /*[out,retval]*/ BSTR * pbstrVal ) = 0;
+      virtual HRESULT __stdcall get_CrosslinkAuthor (
+        /*[out,retval]*/ BSTR * pbstrVal ) = 0;
+      virtual HRESULT __stdcall get_CrosslinkAuthorDisplayName (
+        /*[out,retval]*/ BSTR * pbstrVal ) = 0;
+};
+
+struct __declspec(uuid("0c733a30-2a1c-11ce-ade5-00aa0044773d"))
+ISequentialStream : IUnknown
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall RemoteRead (
+        /*[out]*/ unsigned char * pv,
+        /*[in]*/ unsigned long cb,
+        /*[out]*/ unsigned long * pcbRead ) = 0;
+      virtual HRESULT __stdcall RemoteWrite (
+        /*[in]*/ unsigned char * pv,
+        /*[in]*/ unsigned long cb,
+        /*[out]*/ unsigned long * pcbWritten ) = 0;
+};
+
+#pragma pack(push, 8)
+
+struct _LARGE_INTEGER
+{
+    __int64 QuadPart;
+};
+
+#pragma pack(pop)
+
+#pragma pack(push, 8)
+
+struct _ULARGE_INTEGER
+{
+    unsigned __int64 QuadPart;
+};
+
+#pragma pack(pop)
+
+#pragma pack(push, 4)
+
+struct _FILETIME
+{
+    unsigned long dwLowDateTime;
+    unsigned long dwHighDateTime;
+};
+
+#pragma pack(pop)
+
+#pragma pack(push, 8)
+
+struct tagSTATSTG
+{
+    LPWSTR pwcsName;
+    unsigned long Type;
+    struct _ULARGE_INTEGER cbSize;
+    struct _FILETIME mtime;
+    struct _FILETIME ctime;
+    struct _FILETIME atime;
+    unsigned long grfMode;
+    unsigned long grfLocksSupported;
+    GUID clsid;
+    unsigned long grfStateBits;
+    unsigned long reserved;
+};
+
+#pragma pack(pop)
+
+struct __declspec(uuid("0000000c-0000-0000-c000-000000000046"))
+IStream : ISequentialStream
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall RemoteSeek (
+        /*[in]*/ struct _LARGE_INTEGER dlibMove,
+        /*[in]*/ unsigned long dwOrigin,
+        /*[out]*/ struct _ULARGE_INTEGER * plibNewPosition ) = 0;
+      virtual HRESULT __stdcall SetSize (
+        /*[in]*/ struct _ULARGE_INTEGER libNewSize ) = 0;
+      virtual HRESULT __stdcall RemoteCopyTo (
+        /*[in]*/ struct IStream * pstm,
+        /*[in]*/ struct _ULARGE_INTEGER cb,
+        /*[out]*/ struct _ULARGE_INTEGER * pcbRead,
+        /*[out]*/ struct _ULARGE_INTEGER * pcbWritten ) = 0;
+      virtual HRESULT __stdcall Commit (
+        /*[in]*/ unsigned long grfCommitFlags ) = 0;
+      virtual HRESULT __stdcall Revert ( ) = 0;
+      virtual HRESULT __stdcall LockRegion (
+        /*[in]*/ struct _ULARGE_INTEGER libOffset,
+        /*[in]*/ struct _ULARGE_INTEGER cb,
+        /*[in]*/ unsigned long dwLockType ) = 0;
+      virtual HRESULT __stdcall UnlockRegion (
+        /*[in]*/ struct _ULARGE_INTEGER libOffset,
+        /*[in]*/ struct _ULARGE_INTEGER cb,
+        /*[in]*/ unsigned long dwLockType ) = 0;
+      virtual HRESULT __stdcall Stat (
+        /*[out]*/ struct tagSTATSTG * pstatstg,
+        /*[in]*/ unsigned long grfStatFlag ) = 0;
+      virtual HRESULT __stdcall Clone (
+        /*[out]*/ struct IStream * * ppstm ) = 0;
+};
+
+struct __declspec(uuid("bb89fa86-bc29-4953-94fc-1f8830858beb"))
+ISharedImage : IMessage
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall SaveToFile (
+        /*[in]*/ BSTR bstrFilePath ) = 0;
+      virtual HRESULT __stdcall SaveToStream (
+        /*[in]*/ struct IStream * pStream ) = 0;
+      virtual HRESULT __stdcall get_ExternalId (
+        /*[out,retval]*/ BSTR * pbstrVal ) = 0;
+      virtual HRESULT __stdcall get_Sender (
+        /*[out,retval]*/ struct IContact * * ppVal ) = 0;
+      virtual HRESULT __stdcall get_Author (
+        /*[out,retval]*/ struct IContact * * ppVal ) = 0;
+      virtual HRESULT __stdcall get_FullName (
+        /*[out,retval]*/ BSTR * pbstrVal ) = 0;
+      virtual HRESULT __stdcall get_Crosslink (
+        /*[out,retval]*/ BSTR * pbstrVal ) = 0;
+      virtual HRESULT __stdcall get_CrosslinkAuthor (
+        /*[out,retval]*/ BSTR * pbstrVal ) = 0;
+      virtual HRESULT __stdcall get_CrosslinkAuthorDisplayName (
+        /*[out,retval]*/ BSTR * pbstrVal ) = 0;
+};
+
+struct __declspec(uuid("e632f6ca-69e6-43a7-ade1-331bb33a72f1"))
+IUser : IContact
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_CustomStatusText (
+        /*[out,retval]*/ BSTR * pbstrVal ) = 0;
+};
+
+struct __declspec(uuid("087027e3-181f-423e-aeec-2ed93967af4b"))
+IGroup : IContact
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ int * piVal ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        /*[in]*/ int iIndex,
+        /*[out,retval]*/ struct IContact * * ppContact ) = 0;
+      virtual HRESULT __stdcall Find (
+        /*[in]*/ BSTR bstrContact,
+        /*[out,retval]*/ struct IContact * * ppContact ) = 0;
+      virtual HRESULT __stdcall get_OnlineCount (
+        /*[out,retval]*/ int * piVal ) = 0;
+};
+
+struct __declspec(uuid("292c5923-a717-465d-b222-e7af7e9a79e8"))
+IChannel : IContact
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall Connect ( ) = 0;
+      virtual HRESULT __stdcall Disconnect ( ) = 0;
+      virtual HRESULT __stdcall put_AutoConnect (
+        /*[in]*/ VARIANT_BOOL pbVal ) = 0;
+      virtual HRESULT __stdcall get_AutoConnect (
+        /*[out,retval]*/ VARIANT_BOOL * pbVal ) = 0;
+      virtual HRESULT __stdcall get_OnlineCount (
+        /*[out,retval]*/ int * piVal ) = 0;
+};
+
+enum PTT_EVENTS
+{
+    DISPID_ON_SIGN_IN_STARTED = 1,
+    DISPID_ON_SIGN_IN_SUCCEEDED = 2,
+    DISPID_ON_SIGN_IN_FAILED = 3,
+    DISPID_ON_SIGN_OUT_STARTED = 1280,
+    DISPID_ON_SIGN_OUT_COMPLETE = 1281,
+    DISPID_ON_SIGN_IN_REQUESTED = 2560,
+    DISPID_ON_GET_CAN_SIGN_IN = 2561,
+    DISPID_ON_CONTACT_LIST_CHANGED = 2562,
+    DISPID_ON_HISTORY_CHANGED = 3072,
+    DISPID_ON_MESSAGE_IN_BEGIN = 3840,
+    DISPID_ON_MESSAGE_IN_END = 3841,
+    DISPID_ON_MESSAGE_OUT_BEGIN = 3842,
+    DISPID_ON_MESSAGE_OUT_END = 3843,
+    DISPID_ON_MESSAGE_OUT_ERROR = 3844,
+    DISPID_ON_AUDIO_MESSAGE_IN_START = 3845,
+    DISPID_ON_AUDIO_MESSAGE_IN_STOP = 3846,
+    DISPID_ON_PLAYER_AUDIO_MESSAGE_START = 4096,
+    DISPID_ON_PLAYER_AUDIO_MESSAGE_STOP = 4097,
+    DISPID_ON_PLAYER_AUDIO_MESSAGE_PROGRESS = 4098
+};
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_PttLib =
+    {0x7e28d927,0x9f0f,0x4cc6,{0x9b,0xd9,0xe0,0x95,0xb1,0x57,0x4c,0xcc}};
+extern "C" const GUID __declspec(selectany) DIID_IPttEvents =
+    {0x6ccb765f,0xada5,0x4fea,{0x9c,0xec,0xcf,0x55,0x36,0x0e,0xa0,0xce}};
+extern "C" const GUID __declspec(selectany) IID_IMessage =
+    {0x3a50d50e,0xa39d,0x4677,{0x85,0xe3,0x61,0xe4,0x58,0xab,0xcc,0x80}};
+extern "C" const GUID __declspec(selectany) IID_IHistory =
+    {0x8014091c,0xf92d,0x4441,{0xa7,0xa6,0x96,0x77,0x65,0x1d,0x86,0xdd}};
+extern "C" const GUID __declspec(selectany) IID_IContact =
+    {0x034efc0a,0x35ce,0x4fef,{0x96,0xeb,0x7a,0x44,0xa3,0xbe,0x54,0x61}};
+extern "C" const GUID __declspec(selectany) IID_IAudioMessage =
+    {0xe0434039,0x64d0,0x4849,{0xa6,0x2a,0xe7,0x80,0xd3,0xea,0x9e,0x57}};
+extern "C" const GUID __declspec(selectany) IID_IAudioInMessage =
+    {0x28987b75,0xa974,0x46a7,{0x95,0x03,0x62,0x4f,0xd0,0xbf,0x7c,0x69}};
+extern "C" const GUID __declspec(selectany) CLSID_Ptt =
+    {0x8316a274,0xc3ce,0x46ae,{0x91,0x21,0xcb,0x8e,0x40,0x80,0xd0,0xdb}};
+extern "C" const GUID __declspec(selectany) IID_IContacts =
+    {0xd617ec4d,0x0a09,0x4041,{0xb0,0x1f,0x97,0xb6,0x85,0x26,0xf8,0x20}};
+extern "C" const GUID __declspec(selectany) IID_INetwork =
+    {0xed0cd84a,0x3d1c,0x4b42,{0xb7,0xf0,0xb3,0x92,0x2f,0x71,0x06,0x27}};
+extern "C" const GUID __declspec(selectany) IID_ISettings =
+    {0xe513b0b0,0xc55e,0x468a,{0x95,0x35,0xb9,0x82,0xd8,0x2e,0x10,0x47}};
+extern "C" const GUID __declspec(selectany) IID_IAudioPlayer =
+    {0xa2faf806,0x7439,0x42fe,{0xa7,0x5f,0xf9,0xa5,0xab,0xf2,0xa6,0x63}};
+extern "C" const GUID __declspec(selectany) IID_ICustomization =
+    {0xdd8fd727,0xe041,0x4fea,{0x84,0x15,0x15,0x6e,0x3c,0xca,0x1e,0x6a}};
+extern "C" const GUID __declspec(selectany) IID_IPtt =
+    {0xb535a432,0x1cf4,0x44a8,{0xaa,0xc3,0x1f,0x73,0x6c,0x35,0x3c,0xb7}};
+extern "C" const GUID __declspec(selectany) IID_IAudioDevices =
+    {0x6f6d708f,0x0601,0x47e4,{0x83,0x6e,0x6e,0xa2,0xf9,0x42,0xec,0x3f}};
+extern "C" const GUID __declspec(selectany) IID_ISettings2 =
+    {0x46b9c8d5,0x2e2f,0x4ce0,{0x92,0x62,0x94,0x8d,0x32,0x0c,0x3e,0x76}};
+extern "C" const GUID __declspec(selectany) IID_ISettings3 =
+    {0x69e1efc4,0xe851,0x42bc,{0xac,0x43,0x21,0xa5,0x8b,0x6c,0xb0,0x91}};
+extern "C" const GUID __declspec(selectany) IID_ISettings4 =
+    {0x63481916,0x16c0,0x490b,{0xba,0x2a,0x62,0x36,0x4b,0x40,0x0e,0x9f}};
+extern "C" const GUID __declspec(selectany) IID_IPtt2 =
+    {0x02962e0d,0x38a2,0x4c34,{0xbf,0x2a,0x2f,0x2a,0x0b,0x48,0xe4,0x47}};
+extern "C" const GUID __declspec(selectany) IID_IPtt3 =
+    {0xbd0f65cd,0xafcd,0x4407,{0x9a,0xe3,0xeb,0x3e,0xe4,0xba,0xbd,0x60}};
+extern "C" const GUID __declspec(selectany) IID_IAudioStream =
+    {0x9c920e6d,0x49bc,0x4227,{0xb3,0x6e,0xa3,0xf6,0xba,0xdb,0xb8,0xac}};
+extern "C" const GUID __declspec(selectany) IID_IAudioMessagePlayback =
+    {0xc4e02a76,0x5b35,0x49a7,{0xbc,0x0a,0x23,0x9a,0x07,0x17,0x0a,0xe5}};
+extern "C" const GUID __declspec(selectany) IID_IAudioMessageRecord =
+    {0x597ea004,0xce73,0x496e,{0x86,0x07,0xfa,0x89,0xa9,0xea,0xe3,0x4a}};
+extern "C" const GUID __declspec(selectany) IID_IPtt4 =
+    {0xee361df2,0x315c,0x47fe,{0x95,0x26,0xc7,0xea,0x04,0x4d,0xce,0x5e}};
+extern "C" const GUID __declspec(selectany) IID_INetwork2 =
+    {0x6d3c8268,0x383c,0x47ff,{0x88,0x3a,0xb3,0x19,0x73,0x1b,0x28,0xd9}};
+extern "C" const GUID __declspec(selectany) IID_IAudioInMessage2 =
+    {0xa2990a6c,0xf294,0x4d7f,{0x88,0xc9,0x99,0xe3,0x84,0x10,0x2c,0xe4}};
+extern "C" const GUID __declspec(selectany) IID_IAudioOutMessage =
+    {0xd77f9c22,0x8689,0x4a75,{0x85,0x1c,0x9d,0x9c,0x64,0xe2,0x3d,0x67}};
+extern "C" const GUID __declspec(selectany) IID_IAudioOutMessage2 =
+    {0x0ea8c648,0xd310,0x4b62,{0xab,0xfc,0x00,0xc7,0x1a,0x39,0xda,0x82}};
+extern "C" const GUID __declspec(selectany) IID_IAlertMessage =
+    {0xf4ccb942,0xf285,0x4646,{0xa1,0x16,0xf6,0x30,0x1c,0x45,0x93,0x18}};
+extern "C" const GUID __declspec(selectany) IID_ISequentialStream =
+    {0x0c733a30,0x2a1c,0x11ce,{0xad,0xe5,0x00,0xaa,0x00,0x44,0x77,0x3d}};
+extern "C" const GUID __declspec(selectany) IID_IStream =
+    {0x0000000c,0x0000,0x0000,{0xc0,0x00,0x00,0x00,0x00,0x00,0x00,0x46}};
+extern "C" const GUID __declspec(selectany) IID_ISharedImage =
+    {0xbb89fa86,0xbc29,0x4953,{0x94,0xfc,0x1f,0x88,0x30,0x85,0x8b,0xeb}};
+extern "C" const GUID __declspec(selectany) IID_IUser =
+    {0xe632f6ca,0x69e6,0x43a7,{0xad,0xe1,0x33,0x1b,0xb3,0x3a,0x72,0xf1}};
+extern "C" const GUID __declspec(selectany) IID_IGroup =
+    {0x087027e3,0x181f,0x423e,{0xae,0xec,0x2e,0xd9,0x39,0x67,0xaf,0x4b}};
+extern "C" const GUID __declspec(selectany) IID_IChannel =
+    {0x292c5923,0xa717,0x465d,{0xb2,0x22,0xe7,0xaf,0x7e,0x9a,0x79,0xe8}};
+
+} // namespace PttLib
+
+#pragma pack(pop)
